@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="750" viewBox="0 0 1200 750">
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#99f6e4"/>
+      <stop offset="0.55" stop-color="#0d9488"/>
+      <stop offset="1" stop-color="#134e4a"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="750" fill="url(#sky)"/>
+  <circle cx="170" cy="170" r="68" fill="#ecfeff" opacity="0.9"/>
+  <!-- mountains -->
+  <path d="M0 470 L 200 280 L 380 450 L 560 300 L 760 470 L 940 320 L 1120 460 L 1200 400 L 1200 750 L 0 750 Z" fill="#042f2e" opacity="0.8"/>
+  <path d="M0 470 L 200 280 L 260 340 L 200 400 L 140 470 Z" fill="#0f766e" opacity="0.6"/>
+  <path d="M560 300 L 640 380 L 560 440 L 500 470 Z" fill="#0f766e" opacity="0.5"/>
+  <!-- sea -->
+  <rect x="0" y="520" width="1200" height="230" fill="#155e75"/>
+  <g stroke="#67e8f9" stroke-width="5" opacity="0.3" fill="none">
+    <path d="M0 570 Q 100 558 200 570 T 400 570 T 600 570 T 800 570 T 1000 570 T 1200 570"/>
+    <path d="M0 630 Q 100 618 200 630 T 400 630 T 600 630 T 800 630 T 1000 630 T 1200 630"/>
+    <path d="M0 690 Q 100 678 200 690 T 400 690 T 600 690 T 800 690 T 1000 690 T 1200 690"/>
+  </g>
+  <!-- beach band -->
+  <path d="M0 520 Q 300 545 600 522 T 1200 525 L 1200 545 Q 900 565 600 545 T 0 540 Z" fill="#fde68a" opacity="0.85"/>
+  <!-- yachts -->
+  <g fill="#f0fdfa">
+    <path d="M700 585 L 820 585 L 798 612 L 718 612 Z"/>
+    <rect x="752" y="530" width="5" height="55"/>
+    <path d="M757 530 L 757 585 L 806 585 Z" opacity="0.9"/>
+    <path d="M330 600 L 430 600 L 412 624 L 346 624 Z"/>
+    <rect x="374" y="552" width="5" height="48"/>
+    <path d="M379 552 L 379 600 L 421 600 Z" opacity="0.85"/>
+  </g>
+  <text x="600" y="140" font-family="Cairo, Arial, sans-serif" font-size="92" font-weight="800" fill="#f0fdfa" text-anchor="middle">المكلا الساحرة</text>
+  <text x="600" y="205" font-family="Cairo, Arial, sans-serif" font-size="34" fill="#99f6e4" text-anchor="middle">حيث تلتقي الجبال والبحر — 5 أيام</text>
+</svg>

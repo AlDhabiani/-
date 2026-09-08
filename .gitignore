@@ -1,0 +1,19 @@
+# ===== ملفات نظام التشغيل =====
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# ===== ملفات المحررات =====
+.vscode/
+.idea/
+*.swp
+
+# ===== السجلات =====
+*.log
+
+# ===== الملفات المرفوعة (نستثني الصور التجريبية والملفات الباطنة) =====
+travel/uploads/packages/*
+!travel/uploads/packages/.gitkeep
+!travel/uploads/packages/sample-*.svg
+travel/uploads/agents/*
+!travel/uploads/agents/.gitkeep

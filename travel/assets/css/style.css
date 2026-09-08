@@ -1,0 +1,491 @@
+/* ============================================================
+   سياحة — نظام مكتب سياحة وحجز رحلات
+   ملف الأنماط الرئيسي — assets/css/style.css
+   ============================================================ */
+
+:root {
+    --primary: #0f766e;
+    --primary-dark: #115e59;
+    --primary-darker: #042f2e;
+    --gold: #f59e0b;
+    --gold-dark: #d97706;
+    --bg-soft: #f6f8f8;
+    --ink: #1e293b;
+    --muted: #64748b;
+    --sidebar-w: 264px;
+}
+
+* { font-family: 'Cairo', 'Segoe UI', Tahoma, sans-serif; }
+
+body {
+    background: var(--bg-soft);
+    color: var(--ink);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+main.site-main { flex: 1 0 auto; }
+
+a { text-decoration: none; }
+a:hover { text-decoration: none; }
+
+.text-gold { color: var(--gold) !important; }
+.bg-gold { background-color: var(--gold) !important; }
+
+/* ---------- الأزرار الذهبية ---------- */
+.btn-gold {
+    background: var(--gold);
+    border: 1px solid var(--gold);
+    color: #1e293b;
+    font-weight: 700;
+    transition: all .2s;
+}
+.btn-gold:hover, .btn-gold:focus {
+    background: var(--gold-dark);
+    border-color: var(--gold-dark);
+    color: #fff;
+}
+.btn-primary {
+    background: var(--primary);
+    border-color: var(--primary);
+    font-weight: 600;
+}
+.btn-primary:hover, .btn-primary:focus {
+    background: var(--primary-dark);
+    border-color: var(--primary-dark);
+}
+
+/* ---------- الشعار ---------- */
+.brand-icon {
+    width: 40px; height: 40px;
+    background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+    color: #fff;
+    border-radius: 12px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.1rem;
+    margin-left: 8px;
+}
+.brand-text { font-weight: 800; color: var(--ink); font-size: 1.25rem; }
+
+/* ---------- شريط التنقل ---------- */
+.site-navbar {
+    background: rgba(255, 255, 255, .96);
+    backdrop-filter: blur(8px);
+    padding-block: .7rem;
+}
+.site-navbar .nav-link {
+    font-weight: 600;
+    color: var(--ink);
+    margin-inline: .15rem;
+}
+.site-navbar .nav-link:hover { color: var(--primary); }
+.avatar-initial {
+    background: var(--primary);
+    color: #fff;
+    font-weight: 700;
+}
+
+/* ---------- الهيرو ---------- */
+.hero {
+    position: relative;
+    color: #fff;
+    padding: 110px 0 90px;
+    background:
+        radial-gradient(1000px 400px at 85% -10%, rgba(245, 158, 11, .28), transparent 60%),
+        radial-gradient(800px 420px at 10% 110%, rgba(255, 255, 255, .12), transparent 55%),
+        linear-gradient(135deg, var(--primary-darker) 0%, var(--primary-dark) 45%, var(--primary) 100%);
+    overflow: hidden;
+}
+.hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image: radial-gradient(rgba(255,255,255,.08) 1px, transparent 1px);
+    background-size: 26px 26px;
+    pointer-events: none;
+}
+.hero .hero-badge {
+    background: rgba(255,255,255,.14);
+    border: 1px solid rgba(255,255,255,.25);
+    color: #fff;
+    padding: .35rem .9rem;
+    border-radius: 50rem;
+    font-size: .85rem;
+    font-weight: 600;
+}
+.hero h1 { font-weight: 900; }
+.hero .lead { color: rgba(255,255,255,.85); max-width: 640px; }
+.hero .hero-stats {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    margin-top: 2.2rem;
+}
+.hero .hero-stat b { font-size: 1.6rem; font-weight: 800; display: block; }
+.hero .hero-stat span { font-size: .85rem; color: rgba(255,255,255,.75); }
+
+/* ---------- عناوين الأقسام ---------- */
+.section-title { font-weight: 800; }
+.section-title .title-line {
+    width: 64px; height: 4px;
+    background: var(--gold);
+    border-radius: 4px;
+    display: inline-block;
+    margin-inline-start: 10px;
+    vertical-align: middle;
+}
+
+/* ---------- بطاقات المميزات ---------- */
+.feature-card {
+    border: 0;
+    border-radius: 18px;
+    padding: 1.75rem 1.25rem;
+    text-align: center;
+    background: #fff;
+    box-shadow: 0 4px 18px rgba(15, 23, 42, .05);
+    transition: transform .25s, box-shadow .25s;
+    height: 100%;
+}
+.feature-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 14px 30px rgba(15, 118, 110, .14);
+}
+.feature-icon {
+    width: 62px; height: 62px;
+    margin: 0 auto 1rem;
+    border-radius: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    color: #fff;
+    background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+}
+.feature-card:nth-child(even) .feature-icon {
+    background: linear-gradient(135deg, var(--gold), var(--gold-dark));
+}
+
+/* ---------- بطاقات الباقات ---------- */
+.pkg-card { border-radius: 18px; overflow: hidden; transition: transform .25s, box-shadow .25s; }
+.pkg-card:hover { transform: translateY(-6px); box-shadow: 0 16px 34px rgba(15, 23, 42, .14) !important; }
+.pkg-img { height: 210px; }
+.pkg-img img {
+    width: 100%; height: 100%;
+    object-fit: cover;
+    transition: transform .4s;
+}
+.pkg-card:hover .pkg-img img { transform: scale(1.06); }
+.pkg-type-badge { position: absolute; top: 12px; right: 12px; }
+.pkg-price {
+    position: absolute; bottom: 12px; left: 12px;
+    font-size: .9rem; font-weight: 700;
+    padding: .4rem .8rem;
+}
+.pkg-title { font-weight: 800; min-height: 3.2rem; }
+.pkg-title a { color: var(--ink); }
+.pkg-title a:hover { color: var(--primary); }
+.stars { color: var(--gold); letter-spacing: 2px; }
+
+/* ---------- تفاصيل الباقة ---------- */
+.details-img {
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 10px 26px rgba(15, 23, 42, .12);
+    height: 380px;
+}
+.details-img img { width: 100%; height: 100%; object-fit: cover; }
+.info-chip {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    background: #eef4f3;
+    color: var(--primary-dark);
+    border-radius: 50rem;
+    padding: .35rem .95rem;
+    font-size: .85rem;
+    font-weight: 600;
+    margin: .15rem;
+}
+.itinerary { list-style: none; padding: 0; margin: 0; position: relative; }
+.itinerary::before {
+    content: "";
+    position: absolute;
+    right: 13px; top: 6px; bottom: 6px;
+    width: 2px;
+    background: #d7e3e1;
+}
+.itinerary li {
+    position: relative;
+    padding-right: 42px;
+    padding-bottom: 1rem;
+}
+.itinerary li .day-dot {
+    position: absolute;
+    right: 4px; top: 4px;
+    width: 20px; height: 20px;
+    border-radius: 50%;
+    background: var(--primary);
+    color: #fff;
+    font-size: .7rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+}
+.agent-card {
+    border-radius: 18px;
+    background: linear-gradient(135deg, #f0fdfa, #e0f2f1);
+    border: 1px solid #cde8e4;
+}
+
+/* ---------- النجوم / التقييم ---------- */
+.stars { font-size: .95rem; }
+.review-item { border-right: 3px solid var(--primary); }
+.review-rating { color: var(--gold); }
+
+/* ---------- التذييل ---------- */
+.site-footer {
+    background: var(--primary-darker);
+    color: #cbd5e1;
+    flex-shrink: 0;
+}
+.footer-brand-icon { background: rgba(255,255,255,.12); color: var(--gold); }
+.footer-title { color: #fff; font-weight: 700; margin-bottom: 1rem; }
+.footer-links { list-style: none; padding: 0; margin: 0; }
+.footer-links li { margin-bottom: .55rem; }
+.footer-links a { color: #cbd5e1; transition: color .2s; }
+.footer-links a:hover { color: var(--gold); }
+.social-links a {
+    width: 38px; height: 38px;
+    border-radius: 10px;
+    background: rgba(255,255,255,.08);
+    color: #fff;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 8px;
+    transition: background .2s, transform .2s;
+}
+.social-links a:hover { background: var(--gold); color: #1e293b; transform: translateY(-3px); }
+.footer-bottom {
+    border-top: 1px solid rgba(255,255,255,.08);
+    padding: 1rem 0;
+}
+
+/* ---------- لوحات التحكم ---------- */
+.dash-body { background: var(--bg-soft); }
+.dash-topbar {
+    background: var(--primary-darker);
+    padding: .6rem 1rem;
+}
+.dash-wrap { display: flex; min-height: 100vh; }
+.dash-sidebar {
+    width: var(--sidebar-w);
+    min-height: 100vh;
+    background: linear-gradient(180deg, var(--primary-darker) 0%, #062320 100%);
+    color: #cbd5e1;
+    position: sticky;
+    top: 0;
+    flex-shrink: 0;
+    padding: 1.25rem 0 2rem;
+}
+.sidebar-brand { padding: 0 1.4rem 1.1rem; border-bottom: 1px solid rgba(255,255,255,.08); }
+.sidebar-brand .brand-text { color: #fff; }
+.sidebar-user {
+    margin: 1.1rem 1.25rem;
+    padding: .8rem;
+    background: rgba(255,255,255,.05);
+    border: 1px solid rgba(255,255,255,.08);
+    border-radius: 14px;
+}
+.sidebar-user-name { color: #fff; font-weight: 700; font-size: .95rem; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; max-width: 160px; }
+.sidebar-user-role { font-size: .75rem; color: #94a3b8; }
+.sidebar-nav { padding: .5rem .9rem 0; }
+.sidebar-nav .nav-link {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #cbd5e1;
+    padding: .62rem .9rem;
+    border-radius: 12px;
+    margin-bottom: .25rem;
+    font-weight: 600;
+    font-size: .93rem;
+    transition: background .2s, color .2s;
+}
+.sidebar-nav .nav-link i { width: 20px; text-align: center; }
+.sidebar-nav .nav-link:hover { background: rgba(255,255,255,.08); color: #fff; }
+.sidebar-nav .nav-link.active {
+    background: var(--gold);
+    color: #1e293b;
+    font-weight: 700;
+}
+.sidebar-nav .logout-link { color: #fca5a5; }
+.sidebar-nav .logout-link:hover { background: rgba(220, 38, 38, .18); color: #fecaca; }
+.sidebar-divider { border-color: rgba(255,255,255,.1); margin: .8rem 1rem; }
+.dash-content {
+    flex: 1;
+    padding: 1.5rem;
+    min-width: 0;
+}
+@media (max-width: 991.98px) {
+    .dash-sidebar {
+        position: fixed;
+        inset-inline-end: 0;
+        top: 0;
+        z-index: 1045;
+        transform: translateX(100%);
+        transition: transform .28s ease;
+    }
+    [dir="rtl"] .dash-sidebar { transform: translateX(100%); }
+    .dash-sidebar.open { transform: translateX(0) !important; }
+    .sidebar-backdrop {
+        position: fixed; inset: 0;
+        background: rgba(2, 6, 23, .55);
+        z-index: 1040;
+        opacity: 0;
+        pointer-events: none;
+        transition: opacity .25s;
+    }
+    .sidebar-backdrop.show { opacity: 1; pointer-events: auto; }
+}
+
+/* ---------- بطاقات الإحصائيات ---------- */
+.stat-card {
+    border: 0;
+    border-radius: 18px;
+    overflow: hidden;
+    background: #fff;
+    box-shadow: 0 4px 16px rgba(15, 23, 42, .06);
+    position: relative;
+}
+.stat-card .stat-icon {
+    width: 54px; height: 54px;
+    border-radius: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.35rem;
+    color: #fff;
+}
+.stat-card .stat-value { font-size: 1.65rem; font-weight: 800; }
+.stat-card .stat-label { color: var(--muted); font-size: .85rem; font-weight: 600; }
+.stat-teal   .stat-icon { background: linear-gradient(135deg, #14b8a6, var(--primary)); }
+.stat-gold   .stat-icon { background: linear-gradient(135deg, #fbbf24, var(--gold-dark)); }
+.stat-indigo .stat-icon { background: linear-gradient(135deg, #818cf8, #4f46e5); }
+.stat-rose   .stat-icon { background: linear-gradient(135deg, #fb7185, #e11d48); }
+.stat-sky    .stat-icon { background: linear-gradient(135deg, #38bdf8, #0284c7); }
+.stat-violet .stat-icon { background: linear-gradient(135deg, #a78bfa, #7c3aed); }
+
+/* ---------- الجداول ---------- */
+.table-card {
+    border: 0;
+    border-radius: 18px;
+    overflow: hidden;
+    box-shadow: 0 4px 16px rgba(15, 23, 42, .06);
+}
+.table thead { background: #f1f5f4; }
+.table thead th {
+    font-weight: 700;
+    color: var(--primary-dark);
+    font-size: .85rem;
+    white-space: nowrap;
+}
+.table td { vertical-align: middle; font-size: .92rem; }
+.thumb {
+    width: 56px; height: 44px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+.action-btn { padding: .3rem .55rem; font-size: .8rem; }
+
+/* ---------- الرسوم البسيطة (أعمدة) ---------- */
+.bar-chart { display: flex; flex-direction: column; gap: .7rem; }
+.bar-row { display: flex; align-items: center; gap: .75rem; }
+.bar-row .bar-label { width: 110px; font-size: .85rem; font-weight: 600; color: var(--muted); flex-shrink: 0; }
+.bar-track {
+    flex: 1;
+    height: 14px;
+    background: #eef2f1;
+    border-radius: 8px;
+    overflow: hidden;
+}
+.bar-fill {
+    height: 100%;
+    border-radius: 8px;
+    background: linear-gradient(90deg, var(--primary), #14b8a6);
+    min-width: 4px;
+}
+.bar-row .bar-value { width: 36px; font-weight: 700; font-size: .85rem; }
+
+/* ---------- النماذج ---------- */
+.form-card {
+    border: 0;
+    border-radius: 20px;
+    box-shadow: 0 6px 22px rgba(15, 23, 42, .07);
+}
+.form-label { font-weight: 600; }
+.form-control:focus, .form-select:focus {
+    border-color: var(--primary);
+    box-shadow: 0 0 0 .2rem rgba(15, 118, 110, .15);
+}
+.auth-shell {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    padding: 2.5rem 0;
+    background:
+        radial-gradient(800px 380px at 90% -10%, rgba(245,158,11,.18), transparent 55%),
+        linear-gradient(135deg, var(--primary-darker), var(--primary));
+}
+
+/* ---------- بطاقات آراء العملاء ---------- */
+.testimonial-card {
+    border: 0;
+    border-radius: 18px;
+    height: 100%;
+    box-shadow: 0 4px 18px rgba(15, 23, 42, .05);
+}
+.testimonial-card .quote-icon {
+    font-size: 1.8rem;
+    color: var(--gold);
+}
+
+/* ---------- صفحة CTA ---------- */
+.cta-band {
+    background:
+        radial-gradient(600px 260px at 15% 0%, rgba(245,158,11,.25), transparent 60%),
+        linear-gradient(135deg, var(--primary-darker), var(--primary-dark));
+    border-radius: 24px;
+    color: #fff;
+}
+
+/* ---------- تنوع عام ---------- */
+.empty-state {
+    text-align: center;
+    padding: 3rem 1rem;
+    color: var(--muted);
+}
+.page-head {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: .75rem;
+    margin-bottom: 1.25rem;
+}
+.page-head h4 { font-weight: 800; margin: 0; }
+.filter-card {
+    border: 0;
+    border-radius: 18px;
+    box-shadow: 0 4px 16px rgba(15, 23, 42, .06);
+}
+.pagination .page-link { color: var(--primary); font-weight: 600; }
+.pagination .page-item.active .page-link {
+    background: var(--primary);
+    border-color: var(--primary);
+}
+.review-rating-stars i { margin-left: 2px; }

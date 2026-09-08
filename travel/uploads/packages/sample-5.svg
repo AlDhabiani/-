@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="750" viewBox="0 0 1200 750">
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#a5b4fc"/>
+      <stop offset="0.55" stop-color="#6366f1"/>
+      <stop offset="1" stop-color="#312e81"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="750" fill="url(#sky)"/>
+  <circle cx="1010" cy="160" r="62" fill="#eef2ff" opacity="0.9"/>
+  <!-- arched city -->
+  <g fill="#1e1b4b" opacity="0.92">
+    <rect x="80" y="430" width="130" height="320"/>
+    <path d="M80 430 A 65 65 0 0 1 210 430 Z"/>
+    <rect x="260" y="500" width="120" height="250"/>
+    <path d="M260 500 A 60 60 0 0 1 380 500 Z"/>
+    <rect x="440" y="450" width="150" height="300"/>
+    <path d="M440 450 A 75 75 0 0 1 590 450 Z"/>
+    <rect x="650" y="520" width="110" height="230"/>
+    <path d="M650 520 A 55 55 0 0 1 760 520 Z"/>
+    <rect x="820" y="470" width="140" height="280"/>
+    <path d="M820 470 A 70 70 0 0 1 960 470 Z"/>
+    <rect x="1010" y="530" width="130" height="220"/>
+    <path d="M1010 530 A 65 65 0 0 1 1140 530 Z"/>
+  </g>
+  <!-- arched windows -->
+  <g fill="#c7d2fe" opacity="0.85">
+    <path d="M125 480 h40 v60 h-40 Z M132 480 a16 16 0 0 1 26 0"/>
+    <path d="M490 510 h44 v64 h-44 Z"/>
+    <path d="M860 525 h44 v64 h-44 Z"/>
+    <path d="M1050 580 h40 v56 h-40 Z"/>
+    <path d="M295 550 h40 v56 h-40 Z"/>
+  </g>
+  <!-- crescent minaret -->
+  <g fill="#1e1b4b" opacity="0.92">
+    <rect x="597" y="300" width="26" height="150"/>
+    <path d="M590 300 A 20 20 0 0 1 630 300 L 622 320 L 598 320 Z"/>
+    <path d="M622 268 a 24 24 0 1 0 14 38 a 19 19 0 1 1 -14 -38 Z" fill="#fde68a"/>
+  </g>
+  <rect x="0" y="720" width="1200" height="30" fill="#1e1b4b" opacity="0.5"/>
+  <text x="600" y="160" font-family="Cairo, Arial, sans-serif" font-size="92" font-weight="800" fill="#eef2ff" text-anchor="middle">تريم العتيقة</text>
+  <text x="600" y="225" font-family="Cairo, Arial, sans-serif" font-size="34" fill="#c7d2fe" text-anchor="middle">مدينة العلم والتاريخ — يومان</text>
+</svg>
