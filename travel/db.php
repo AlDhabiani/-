@@ -22,6 +22,12 @@ $user = "root";
 $pass = "";
 $db   = "travel_db";
 
+/*
+ * على PHP 8.1+ يرمي mysqli استثناءً عند فشل الاتصال بدل إرجاع false —
+ * نجعله يرجع false حتى تظهر الصفحة العربية الموضحَة أدناه مع سبب الخطأ.
+ */
+mysqli_report(MYSQLI_REPORT_OFF);
+
 $conn = mysqli_connect($host, $user, $pass, $db);
 
 if (!$conn) {
